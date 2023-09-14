@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import transition from "../../helpers/transition"
 import InnerSectionTitle from "../InnerSectionTitle";
 import gsap from "gsap";
@@ -27,6 +27,10 @@ const Donations = () => {
     });
 
   }, [])
+
+  useEffect(() => {
+    document.title = 'Carpi Coder | Donaciones';
+  }, []);
 
     return (
       <section className="donations inner-section">

@@ -1,9 +1,15 @@
 import { Link } from "react-router-dom"
 import { ArrowReturnLeft } from "react-bootstrap-icons"
 import transition from "../../helpers/transition"
+import { useEffect } from "react";
 
 
 const Cursos = () => {
+
+  useEffect(() => {
+    document.title = 'Carpi Coder | Cursos';
+  }, []);
+
   return (
     <section className="inner-section">
       <div className="container">

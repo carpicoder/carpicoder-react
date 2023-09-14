@@ -19,6 +19,14 @@ const CHCourse = () => {
             })
     }, [courseId]);
 
+    
+    useEffect(() => {
+        document.title = course ? 'Carpi Coder | ' + course.titleFull : 'Carpi Coder | Videítos de repaso';
+    }, [course]);
+
+    
+
+
   return (
     <section className="reviews inner-section">
       <div className="container">

@@ -4,11 +4,15 @@ import transition from "../../helpers/transition"
 import InnerSectionTitle from "../InnerSectionTitle"
 import InnerSectionSubtitle from "../InnerSectionSubtitle"
 import gsap from "gsap"
-import { useLayoutEffect, useRef } from "react"
+import { useEffect, useLayoutEffect, useRef } from "react"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 
 const ReviewsCH = () => {
+
+  useEffect(() => {
+    document.title = 'Carpi Coder | Videítos de repaso';
+  }, []);
 
   const courseRef = useRef([]);
   gsap.registerPlugin(ScrollTrigger);
