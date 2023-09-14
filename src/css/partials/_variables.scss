@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200;10..48,300;10..48,400;10..48,500;10..48,600;10..48,700;10..48,800&display=swap');
+
+:root {
+  scroll-behavior: smooth;
+  --ff-title: 'Bricolage Grotesque', sans-serif;
+  --ff-text: 'Rubik', sans-serif;
+  --clr-dark: #1c1c1c;
+  --clr-light: #f2ebd9;
+  --clr-light-transparent: rgba(242, 235, 217, .8);
+  --clr-discord: #5865f2;
+  --clr-youtube: #ff0000;
+  --clr-primary: #ff3c00;
+  --clr-primary-transparent: #ff3c0080;
+}
+
+$ff-title: var(--ff-title);
+$ff-text: var(--ff-text);
+$clr-dark: var(--clr-dark);
+$clr-light: var(--clr-light);
+$clr-light-transparent: var(--clr-light-transparent);
+$clr-discord: var(--clr-discord);
+$clr-youtube: var(--clr-youtube);
+$clr-primary: var(--clr-primary);
+$clr-primary-transparent: var(--clr-primary-transparent);
+
+$cubic-bezier: cubic-bezier(0.175, 0.885, 0.32, 1.275);

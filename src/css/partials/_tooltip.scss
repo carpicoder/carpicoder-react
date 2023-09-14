@@ -1,0 +1,23 @@
+[data-tooltip] {
+    position: relative;
+
+    &::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        top: calc(100%);
+        left: 50%;
+        transform: translateX(-50%) scale(0);
+        background-color: $clr-dark;
+        color: $clr-light;
+        padding: .5rem;
+        font-size: .75em;
+        border-radius: .5em;
+        transition: .2s;
+        transform-origin: center top;
+    }
+
+    &:hover::after {
+        transform:  translateX(-50%) scale(1);
+        transition-timing-function: $cubic-bezier;
+    }
+}

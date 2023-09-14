@@ -1,0 +1,97 @@
+import gsap from "gsap";
+import { useLayoutEffect, useRef } from "react";
+import { Link, NavLink } from "react-router-dom";
+import SplitType from "split-type";
+import ChangeLanguage from "./ChangeLanguage";
+
+
+const Header = () =>{
+
+  const headerRef = useRef();
+  const logoRef = useRef();
+  const navItemRef = useRef([]);
+
+  useLayoutEffect(() => {
+
+    gsap.from(headerRef.current, {
+      scale: 0,
+      ease: "back.out(2)",
+      delay: .75
+    })
+
+    gsap.from(navItemRef.current, {
+      y: -100,
+      opacity: 0,
+      stagger: .02,
+      ease: "back.out(2)",
+      delay: 1.25
+    })
+
+    const docStyle = getComputedStyle(document.documentElement);
+
+    const logoElement = logoRef.current;
+    const logoText = new SplitType(logoElement, {
+      types: "chars"
+    })
+
+    gsap.from(logoText.chars, {
+      x: -100,
+      opacity: 0,
+      ease: "back.out(2)",
+      stagger: .02,
+      delay: 1
+    })
+
+    logoText.chars.forEach((char) => {
+
+      gsap.set(char, {
+        color: char.textContent !== "." ? docStyle.getPropertyValue("--clr-dark") : docStyle.getPropertyValue("--clr-primary"),
+      })
+
+      char.addEventListener("mouseenter", () => {
+          gsap.to(char, {
+            translateY: -10,
+            color: docStyle.getPropertyValue("--clr-primary"),
+            duration: .5,
+            ease: "back.out",
+          })
+      })
+      char.addEventListener("mouseleave", () => {
+          gsap.to(char, {
+            translateY: 0,
+            delay: .3,
+            ease: "back.out(5)",
+            color: char.textContent !== "." ? docStyle.getPropertyValue("--clr-dark") : docStyle.getPropertyValue("--clr-primary"),
+          })
+      })
+    });
+
+  }, [])
+
+
+
+    return (
+       <header className="header" ref={headerRef}>
+          <Link to="/" className="header-logo" ref={logoRef}>CarpiCoder.</Link>
+          <nav className="nav">
+            <ul className="nav-list">
+              <li className="nav-item" ref={element => {navItemRef.current[0] = element;}}>
+                <NavLink to="/" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>Inicio</NavLink>
+              </li>
+              <li className="nav-item" ref={element => {navItemRef.current[1] = element;}}>
+                <NavLink to="/cursos" className="nav-link" data-tooltip="Próximamente">Cursos</NavLink>
+              </li>
+              <li className="nav-item" ref={element => {navItemRef.current[2] = element;}}>
+                <NavLink to="/repasos-coderhouse" className="nav-link" data-tooltip="Coderhouse">Repasos</NavLink>
+              </li>
+              <li className="nav-item" ref={element => {navItemRef.current[3] = element;}}>
+                <NavLink to="/donaciones" className="nav-link">Donaciones</NavLink>
+              </li>
+            </ul>
+          </nav>
+          {/* <ChangeLanguage /> */}
+       </header>
+    )
+};
+
+export default Header;

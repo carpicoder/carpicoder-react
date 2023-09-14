@@ -1,0 +1,30 @@
+.donations {
+
+    .donation {
+        margin-top: 2rem;
+        padding: 2rem 3rem;
+        border: 1px solid $clr-primary;
+        border-radius: 1rem;
+
+        &-title {
+            font-size: 3rem;
+        }
+
+        &-subtitle {
+            font-size: 1.75rem;
+            margin-top: 1.5rem;
+
+            &:first-of-type {
+                margin-top: .5rem;
+            }
+        }
+
+        &-text {
+            font-size: 1.1rem;
+
+            &-small {
+                font-size: .85em;
+            }
+        }
+    }
+}

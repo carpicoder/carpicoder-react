@@ -1,0 +1,15 @@
+.loader {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 99999;
+
+    &-bar {
+        background-color: $clr-primary;
+        flex-grow: 1;
+    }
+}

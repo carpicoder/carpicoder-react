@@ -1,0 +1,24 @@
+.inner-section {
+    padding-block: 4rem;
+    flex-grow: 1;
+
+    &-title {
+        font-size: 5rem;
+    }
+
+    &-pretitle {
+        font-size: 1rem;
+    }
+
+    &-go-back-link {
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+}

@@ -1,0 +1,30 @@
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.button {
+    margin-top: .5rem;
+    padding: .5rem 1rem;
+    border: 1px solid $clr-primary;
+    display: inline-block;
+    border-radius: 100vmax;
+    transition: .2s;
+    transition-timing-function: $cubic-bezier;
+
+    &:hover {
+        background-color: $clr-primary;
+        transform: scale(1.1);
+    }
+
+    &.button-orange {
+        background-color: $clr-primary;
+        color: $clr-light;
+
+        &:hover {
+            background-color: $clr-dark;
+            color: $clr-light;
+        }
+    }
+}

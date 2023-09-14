@@ -1,0 +1,13 @@
+{
+    "header": {
+        "home": "Inicio",
+        "courses": "Cursos",
+        "reviews": "Repasos",
+        "donations": "Donaciones",
+        "soon": "Próximamente",
+        "coderhouse": "Coderhouse"
+    },
+    "home": {
+        "heroTitle": "Soy Carpi y hago contenido sobre desarrollo web."
+    }
+}

@@ -1,0 +1,59 @@
+.shortcuts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    padding-block: 1rem;
+
+    .shortcut {
+        background-color: $clr-light;
+        color: $clr-dark;
+        padding: 2rem;
+        border-radius: 1rem;
+        border: 2px solid $clr-primary;
+        transition-property: background-color, border, transform;
+        transition-duration: .2s, .2s, .2s;
+        transition-timing-function: ease, ease, $cubic-bezier;
+
+        &-title {
+            font-size: 3rem;
+            margin-bottom: .5rem;
+            transition: .2s;
+        }
+
+        &-text {
+            font-size: 1.1rem;
+            transition: .2s;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+
+        &-youtube {
+
+            &:hover {
+                background-color: $clr-youtube;
+                color: $clr-light;
+                border-color: $clr-youtube;
+            }
+        }
+
+        &-discord {
+
+            &:hover {
+                background-color: $clr-discord;
+                color: $clr-light;
+                border-color: $clr-discord;
+            }
+        }
+
+        &-donations {
+
+            &:hover {
+                background-color: $clr-primary;
+                color: $clr-light;
+            }
+        }
+    }
+}

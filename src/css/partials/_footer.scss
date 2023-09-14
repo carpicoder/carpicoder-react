@@ -1,0 +1,28 @@
+.footer {
+    background-color: $clr-dark;
+    color: $clr-light;
+    padding: 2rem;
+    margin-top: 5rem;
+
+    .social {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            width: 2.5rem;
+            height: 2.5rem;
+            transition-property: color, transform;
+            transition-duration: .3s, .3s;
+            transition-delay: .1s, 0s;
+            transition-timing-function: ease, $cubic-bezier;
+            
+            
+            &:hover {
+                color: $clr-primary;
+                transform: scale(1.25);
+            }
+        }
+    }
+}

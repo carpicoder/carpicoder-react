@@ -1,0 +1,282 @@
+[
+    {
+        "id": "desarrollo-web",
+        "title": "Desarrollo Web",
+        "titleFull": "Curso de Desarrollo Web",
+        "classes": [
+            {
+                "id": "clase-0",
+                "title": "Clase 0: Introducción al Desarrollo Web",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "xCFUV9ji3AA"}
+                ]
+            },
+            {
+                "id": "clase-1",
+                "title": "Clase 1: Prototipado y conceptos básicos",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "zPAvdc1GvLs"}
+                ]
+            },
+            {
+                "id": "clase-2",
+                "title": "Clase 2: Primeros pasos con HTML",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "vcA-smViJng"},
+                    {"title": "Rutas a imágenes o archivos en HTML", "id": "Bw33H1wNGT0"},
+                    {"title": "Jueguitos sobre Nesting y rutas", "id": "DvcFibhF7wo"},
+                    {"title": "HTML semántico y etiquetas semánticas", "id": "wx92etmlHtc", "featured": true}
+                ]
+            },
+            {
+                "id": "clase-3",
+                "title": "Clase 3: Incluyendo CSS a nuestro proyecto",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "k690TohJqU8"},
+                    {"title": "Todo sobre unidades de medida en CSS", "id": "EbsyJrtJgpw"},
+                    {"title": "¿Qué son EM y REM?", "id": "fNO35CJFVRQ"},
+                    {"title": "Dev tools o herramientas del desarrollador (inspeccionar elemento)", "id": "Yc9Ng774ulw"},
+                    {"title": "Más allá de \"class\": tipos de selectores en CSS", "id": "k-4pOb3OMnI"}
+                ]
+            },
+            {
+                "id": "clase-4",
+                "title": "Clase 4: Box model",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "XxMwhv3Q8YQ"},
+                    {"title": "Position Fixed / Sticky / Absolute en detalle", "id": "SwGxqHpQnk0"},
+                    {"title": "Por qué no usar \"height\" en CSS", "id": "HUTnDswHcuc"},
+                    {"title": "Qué hace \"box-sizing\" en nuestro reset", "id": "famvtt4mQUI"},
+                    {"title": "Cómo usar íconos en nuestro sitio web", "id": "c_580b7dzqc"}
+                ]
+            },
+            {
+                "id": "clase-5",
+                "title": "Clase 5: Flexbox",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "FXfnp36A7o8"},
+                    {"title": "Columnas iguales en Flexbox", "id": "WCqjkLyc_fI"},
+                    {"title": "Guía muy completa sobre Flexbox", "id": "Glc8Z_vhKXQ", "featured": true},
+                    {"title": "Ejemplos reales donde usar Flexbox", "id": "9jU3QRobsLc"}
+                ]
+            },
+            {
+                "id": "clase-6",
+                "title": "Clase 6: Grid",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "BE_NTuetees"},
+                    {"title": "Centrar elementos en CSS", "id": "0n722UUQ-7E"},
+                    {"title": "Armando una landing page con Flexbox y Grid", "id": "2Pcbjp7gre4", "featured": true},
+                    {"title": "Jueguitos sobre Flexbox y Grid", "id": "RLeXH2h9uf8"},
+                    {"title": "Construyendo un sitio web completo con Flexbox y Grid - Parte 1", "id": "l_44lAuCdVQ"},
+                    {"title": "Construyendo un sitio web completo con Flexbox y Grid - Parte 2", "id": "NUnCon6ZapY"},
+                    {"title": "Construyendo un sitio web completo con Flexbox y Grid - Parte 3", "id": "Y5KKFNhFJhw"}
+                ]
+            },
+            {
+                "id": "clase-7",
+                "title": "Clase 7: Media queries",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "E0ovTcfOV3M"},
+                    {"title": "Construyendo un sitio web completo con Flexbox y Grid - Parte 4: Media queries", "id": "x7ARFH7g45s"},
+                    {"title": "Armando un sitio web responsive - Parte 1: Mobile first", "id": "ERnGV1zvOJ0", "featured": true},
+                    {"title": "Armando un sitio web responsive - Parte 2: Media queries para desktop", "id": "Pxckf9VTrbk"},
+                    {"title": "Armando mi sitio web 100% responsive", "id": "Oc9m4Wt6PlI"}
+                ]
+            },
+            {
+                "id": "clase-8",
+                "title": "Clase 8: Pseudoclases y pseudoelementos",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "Qi7_3eLKCr8"},
+                    {"title": "::before y ::after explicados", "id": "wEl62cnPBsY", "featured": true},
+                    {"title": "Conociendo una propiedad para controlar imágenes", "id": "SfIhedIsUck"}
+                ]
+            },
+            {
+                "id": "clase-9",
+                "title": "Clase 9: Bootstrap",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "NPFisPbrhX0"}
+                ]
+            },
+            {
+                "id": "clase-10",
+                "title": "Clase 10: Git",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "kXFcIp2s7SM"}
+                ]
+            },
+            {
+                "id": "clase-11",
+                "title": "Clase 11: GitHub",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "uIBWEEEZ5IM"},
+                    {"title": "Cómo funciona el .GITIGNORE", "id": "TLLzSvcoVQg"}
+                ]
+            },
+            {
+                "id": "clase-12",
+                "title": "Clase 12: SASS I",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "k2PO7lF_1lQ"}
+                ]
+            },
+            {
+                "id": "clase-13",
+                "title": "Clase 13: SASS II",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "AUWBHTOopFE"},
+                    {"title": "Media queries en SASS", "id": "jLfZ05qctWI"}
+                ]
+            },
+            {
+                "id": "clase-14",
+                "title": "Clase 14: Animaciones",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "-kCiQsT86jQ"}
+                ]
+            },
+            {
+                "id": "clase-15",
+                "title": "Clase 15: SEO y buenas prácticas",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "d6FYwZOyGZQ"}
+                ]
+            },
+            {
+                "id": "clase-16",
+                "title": "Clase 16: Servidores y dominios",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "Jft5yjAJ1pI"},
+                    {"title": "Contratando servidor y dominio en Hostinger", "id": "TpWMhXX2p8g"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "javascript",
+        "title": "JavaScript",
+        "titleFull": "Curso de JavaScript",
+        "classes": [
+            {
+                "id": "clase-1",
+                "title": "Clase 1: Sintaxis, variables y consola",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "-H4W_PkFbls"}
+                ]
+            },
+            {
+                "id": "clase-2",
+                "title": "Clase 2: Condicionales y operadores lógicos",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "gNn_cinKvSg"}
+                ]
+            },
+            {
+                "id": "clase-3",
+                "title": "Clase 3: for, while, do...while y switch",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "aCbLJO8HIzk"}
+                ]
+            },
+            {
+                "id": "clase-4",
+                "title": "Clase 4: Funciones",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "o5ngEsrjJoI"}
+                ]
+            },
+            {
+                "id": "clase-5",
+                "title": "Clase 5: Objetos",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "gmhKoMzoXq8"}
+                ]
+            },
+            {
+                "id": "clase-6",
+                "title": "Clase 6: Arrays",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "yXmtj0oz4bw"}
+                ]
+            },
+            {
+                "id": "clase-7",
+                "title": "Clase 7: Funciones de orden superior",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "-JWVobI2m80"}
+                ]
+            },
+            {
+                "id": "clase-8",
+                "title": "Clase 8: DOM",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "BzXj8-zdVGM"}
+                ]
+            },
+            {
+                "id": "clase-9",
+                "title": "Clase 9: Eventos",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "LI6RMcvfnt0"}
+                ]
+            },
+            {
+                "id": "clase-10",
+                "title": "Clase 10: Storage y JSON",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "2_lKFUBSyto"}
+                ]
+            },
+            {
+                "id": "clase-11",
+                "title": "Clase 11: Repaso",
+                "videos": [
+                    {"title": "Construyendo un e-commerce desde cero", "id": "RiB4mV3VnRY"},
+                    {"title": "Agregando media queries", "id": "jU2RExwQMa4"}
+                ]
+            },
+            {
+                "id": "clase-12",
+                "title": "Clase 12: Operadores avanzados",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "RUJBXQhRjsY"}
+                ]
+            },
+            {
+                "id": "clase-13",
+                "title": "Clase 13: Librerías",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "EDIg8rqbrBM"}
+                ]
+            },
+            {
+                "id": "clase-14",
+                "title": "Clase 14: Asincronía y promesas",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "oc-RvF-fJMs"}
+                ]
+            },
+            {
+                "id": "clase-15",
+                "title": "Clase 15: API y Fetch",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "95BFumHfwAA"},
+                    {"title": "Agregando Fetch y Librerías al e-commerce", "id": "-TQ1_D-WIgE"},
+                    {"title": "ASYNC AWAIT en 10 minutos", "id": "iqtpnzXVmsk"}
+                ]
+            },
+            {
+                "id": "proyectos-y-recomendaciones",
+                "title": "Proyectos y recomendaciones finales",
+                "videos": [
+                    {"title": "Pokédex con la PokéAPI", "id": "EmxvMPcIy5c"},
+                    {"title": "Temas importantes de JS a tener en cuenta para React", "id": "IISOVCyzmuw"},
+                    {"title": "Piedra, papel o tijera", "id": "QZ6iJG1mQFM"},
+                    {"title": "Efecto Parallax", "id": "hsC4XRdMmEg"}
+                ]
+            }
+        ]
+    }
+]
