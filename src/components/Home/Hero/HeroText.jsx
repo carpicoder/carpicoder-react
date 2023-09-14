@@ -1,10 +1,13 @@
-import { useLayoutEffect, useRef } from "react";
+import { useContext, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
+import { LangContext } from "../../../context/LanguageContext";
 import SplitType from "split-type";
 
 const HeroText = () => {
 
-    const heroTitleH1 = useRef();
+    const { lang } = useContext(LangContext);
+
+    const heroTitleH1 = useRef(null);
     const heroDescriptionP = useRef();
 
     useLayoutEffect(() => {
@@ -85,7 +88,7 @@ const HeroText = () => {
         });
 
           
-    }, [])
+    }, [lang])
     
 
 

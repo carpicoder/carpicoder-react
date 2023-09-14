@@ -1,11 +1,13 @@
 import gsap from "gsap";
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import SplitType from "split-type";
 import ChangeLanguage from "./ChangeLanguage";
+import { List, X } from 'react-bootstrap-icons';
 
 
-const Header = () =>{
+
+const Header = ({ location }) =>{
 
   const headerRef = useRef();
   const logoRef = useRef();
@@ -68,27 +70,50 @@ const Header = () =>{
 
   }, [])
 
+  const [menuActive, setMenuActive] = useState(false);
+
+  const handleClickMenu = () => {
+    setMenuActive(!menuActive);
+  }
+
+  useEffect(() => {
+    setTimeout(() => {
+      setMenuActive(false);
+    }, 500);
+  }, [location])
+  
+
 
 
     return (
-       <header className="header" ref={headerRef}>
+       <header className={menuActive ? 'header menu-active' : 'header'} ref={headerRef}>
           <Link to="/" className="header-logo" ref={logoRef}>CarpiCoder.</Link>
           <nav className="nav">
             <ul className="nav-list">
               <li className="nav-item" ref={element => {navItemRef.current[0] = element;}}>
-                <NavLink to="/" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>Inicio</NavLink>
+                <NavLink to="/" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
+                  Inicio
+                </NavLink>
               </li>
               <li className="nav-item" ref={element => {navItemRef.current[1] = element;}}>
-                <NavLink to="/cursos" className="nav-link" data-tooltip="Próximamente">Cursos</NavLink>
+                <NavLink to="/cursos" className="nav-link" data-tooltip="Próximamente">
+                  Cursos
+                </NavLink>
               </li>
               <li className="nav-item" ref={element => {navItemRef.current[2] = element;}}>
-                <NavLink to="/repasos-coderhouse" className="nav-link" data-tooltip="Coderhouse">Repasos</NavLink>
+                <NavLink to="/repasos-coderhouse" className="nav-link" data-tooltip="Coderhouse">
+                  Repasos
+                </NavLink>
               </li>
               <li className="nav-item" ref={element => {navItemRef.current[3] = element;}}>
-                <NavLink to="/donaciones" className="nav-link">Donaciones</NavLink>
+                <NavLink to="/donaciones" className="nav-link">
+                  Donaciones
+                </NavLink>
               </li>
             </ul>
           </nav>
+          <List className="open-menu" onClick={handleClickMenu} />
+          <X className="close-menu" onClick={handleClickMenu} />
           {/* <ChangeLanguage /> */}
        </header>
     )

@@ -4,6 +4,10 @@
 
     &-title {
         font-size: 5rem;
+
+        @include query(600) {
+            font-size: 3rem;
+        }
     }
 
     &-pretitle {

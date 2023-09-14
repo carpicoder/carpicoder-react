@@ -1,0 +1,5 @@
+@mixin query($ancho) {
+    @media screen and (max-width: "#{$ancho}px") {
+        @content;
+    }
+}

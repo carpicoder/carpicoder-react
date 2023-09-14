@@ -52,6 +52,10 @@
                 }
             }
         }
+
+        @include query(700) {
+            display: none;
+        }
     }
 
     .languages {
@@ -80,6 +84,69 @@
 
         b {
             color: $clr-primary;
+        }
+    }
+
+    .open-menu,
+    .close-menu {
+        width: 2rem;
+        height: 2rem;
+        cursor: pointer;
+        display: none;
+    }
+
+    @include query(700) {
+        .open-menu {
+            display: block;
+        }
+    }
+
+    &.menu-active {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+
+        .open-menu {
+            display: none;
+        }
+
+        .close-menu {
+            display: block;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+
+        .nav {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+
+            &-list {
+                flex-grow: 1;
+                flex-direction: column;
+                padding-block: 1rem;
+                justify-content: space-evenly;
+                font-size: 2rem;
+            }
+
+            &-link {
+                
+                &::after {
+                    font-size: .5em;
+                    top: 50%;
+                    transform: scale(1) translateY(-50%);
+                    left: calc(100% + 1rem);
+                    padding: .25em .5em;
+                }
+            }
+        }
+
+        .header-logo {
+            display: none;
         }
     }
 }

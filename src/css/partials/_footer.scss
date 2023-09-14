@@ -17,6 +17,11 @@
             transition-duration: .3s, .3s;
             transition-delay: .1s, 0s;
             transition-timing-function: ease, $cubic-bezier;
+
+            @include query(350) {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
             
             
             &:hover {

@@ -1,8 +1,21 @@
 .shortcuts {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "youtube discord donations";
     gap: 2rem;
     padding-block: 1rem;
+
+    @include query(1200) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "youtube discord"
+            "donations donations";
+    }
+
+    @include query(600) {
+        display: flex;
+        flex-direction: column;
+    }
 
     .shortcut {
         background-color: $clr-light;
@@ -18,6 +31,10 @@
             font-size: 3rem;
             margin-bottom: .5rem;
             transition: .2s;
+
+            @include query(500) {
+                font-size: 2rem;
+            }
         }
 
         &-text {
@@ -31,6 +48,7 @@
 
 
         &-youtube {
+            grid-area: youtube;
 
             &:hover {
                 background-color: $clr-youtube;
@@ -40,6 +58,7 @@
         }
 
         &-discord {
+            grid-area: discord;
 
             &:hover {
                 background-color: $clr-discord;
@@ -49,6 +68,7 @@
         }
 
         &-donations {
+            grid-area: donations;
 
             &:hover {
                 background-color: $clr-primary;

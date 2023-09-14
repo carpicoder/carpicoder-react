@@ -44,6 +44,14 @@
         grid-template-columns: 1fr 1fr 1fr;
         gap: 1rem;
 
+        @include query(1000) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include query(600) {
+            grid-template-columns: 1fr;
+        }
+
         .video {
             background-color: $clr-dark;
             padding: 1rem;

@@ -8,11 +8,19 @@
 
         &-title {
             font-size: 3rem;
+
+            @include query(600) {
+                font-size: 2rem;
+            }
         }
 
         &-subtitle {
             font-size: 1.75rem;
             margin-top: 1.5rem;
+
+            @include query(600) {
+                font-size: 1.25rem;
+            }
 
             &:first-of-type {
                 margin-top: .5rem;

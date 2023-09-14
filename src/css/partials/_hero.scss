@@ -12,10 +12,33 @@
     row-gap: 1rem;
     align-content: center;
 
+    @include query(1000) {
+        grid-template-areas:
+            "avatar title"
+            "description description"
+            "stats stats";
+    }
+
+    @include query(800) {
+        grid-template-columns: .4fr 1fr;
+    }
+
+    @include query(700) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "title title"
+            "avatar stats"
+            "description description";
+    }
+
     &-avatar {
         grid-area: avatar;
         align-self: start;
         position: relative;
+
+        @include query(700) {
+            align-self: center;
+        }
 
         &-background {
             position: absolute;
@@ -37,6 +60,30 @@
         h1 {
             font-size: 5rem;
             line-height: .85em;
+
+            @include query(1170) {
+                font-size: 4.5rem;
+            }
+
+            @include query(1050) {
+                font-size: 4rem;
+            }
+
+            @include query(800) {
+                font-size: 3.5rem;
+            }
+
+            @include query(700) {
+                font-size: 3rem;
+            }
+
+            @include query(600) {
+                font-size: 2.5rem;
+            }
+
+            @include query(400) {
+                font-size: 2rem;
+            }
         }
     }
 
@@ -49,6 +96,11 @@
         display: flex;
         justify-content: space-between;
 
+        @include query(700) {
+            flex-direction: column;
+            gap: 1rem;
+        }
+
         .hero-stat {
 
             &-number {
@@ -57,6 +109,18 @@
                 font-weight: 500;
                 line-height: 1em;
                 position: relative;
+
+                @include query(800) {
+                    font-size: 5rem;
+                }
+
+                @include query(700) {
+                    font-size: 4rem;
+                }
+
+                @include query(600) {
+                    font-size: 3rem;
+                }
 
                 &::before {
                     content: '';
