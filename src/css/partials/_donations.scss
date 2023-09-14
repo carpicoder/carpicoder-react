@@ -7,7 +7,8 @@
         border-radius: 1rem;
 
         &-title {
-            font-size: 3rem;
+            font-size: 2rem;
+            margin-bottom: 1rem;
 
             @include query(600) {
                 font-size: 2rem;
@@ -15,7 +16,7 @@
         }
 
         &-subtitle {
-            font-size: 1.75rem;
+            font-size: 1.5rem;
             margin-top: 1.5rem;
 
             @include query(600) {
@@ -25,14 +26,31 @@
             &:first-of-type {
                 margin-top: .5rem;
             }
+
+            > span {
+                font-family: $ff-text;
+                font-size: .65em;
+                font-weight: 400;
+            }
         }
 
         &-text {
-            font-size: 1.1rem;
+            font-size: 1rem;
 
             &-small {
                 font-size: .85em;
             }
+        }
+    }
+
+    &-grid {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+
+        @include query(900) {
+            grid-template-columns: 1fr;
         }
     }
 }

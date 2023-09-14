@@ -72,6 +72,7 @@ p {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  min-height: 100dvh;
 }
 
 .not-found {
@@ -111,6 +112,7 @@ p {
   left: 0;
   width: 100%;
   height: 100vh;
+  height: 100dvh;
   z-index: 9999999999;
   transform-origin: bottom;
   background-color: var(--clr-dark);
@@ -145,7 +147,9 @@ p {
 .buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  row-gap: 0.5rem;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
 }
 
 .button {
@@ -259,6 +263,7 @@ p {
 .header.menu-active {
   position: fixed;
   height: 100vh;
+  height: 100dvh;
   width: 100%;
   flex-direction: column;
   align-items: start;
@@ -543,7 +548,8 @@ p {
   border-radius: 1rem;
 }
 .donations .donation-title {
-  font-size: 3rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 @media screen and (max-width: 600px) {
   .donations .donation-title {
@@ -551,7 +557,7 @@ p {
   }
 }
 .donations .donation-subtitle {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   margin-top: 1.5rem;
 }
 @media screen and (max-width: 600px) {
@@ -562,11 +568,27 @@ p {
 .donations .donation-subtitle:first-of-type {
   margin-top: 0.5rem;
 }
+.donations .donation-subtitle > span {
+  font-family: var(--ff-text);
+  font-size: 0.65em;
+  font-weight: 400;
+}
 .donations .donation-text {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 .donations .donation-text-small {
   font-size: 0.85em;
+}
+.donations-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+}
+@media screen and (max-width: 900px) {
+  .donations-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .course-review {

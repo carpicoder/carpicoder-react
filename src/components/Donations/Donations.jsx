@@ -37,67 +37,56 @@ const Donations = () => {
         <div className="container">
           <InnerSectionTitle text="Donaciones"/>
           <InnerSectionSubtitle text="Podés apoyar mi contenido haciendo un pequeño aporte mensual o único, para poder hacer más y mejor contenido."/>
+          <div className="donations-grid">
           <article id="argentina" className="donation" ref={element => {donationRef.current[0] = element;}}>
-            <h2 className="donation-title">Si estás en Argentina 🇦🇷</h2>
+            <h2 className="donation-title">Desde Argentina 🇦🇷</h2>
 
-            <h3 className="donation-subtitle">MercadoPago</h3>
-            <p className="donation-text">Podés suscribirte mensualmente en pesos argentinos.</p>
+            <h3 className="donation-subtitle">MercadoPago <span>(ARS)</span></h3>
             <div className="buttons">
-              <a target="_blank" href="https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c9380848a6c2082018a7084f52f0231" className="button">$100 por mes</a>
-              <a target="_blank" href="https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c9380848a6c204d018a7086014b0299" className="button">$500 por mes</a>
-              <a target="_blank" href="https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c9380848a6c2082018a7086ceb00233" className="button">$1.000 por mes</a>
-              <a target="_blank" href="https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c9380848a6c204d018a70871b53029d" className="button">$2.500 por mes</a>
-              <a target="_blank" href="https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c9380848a6c207d018a708768bc0284" className="button">$5.000 por mes</a>
-              <a target="_blank" href="https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c9380848a6c2082018a7087b4a40235" className="button">$10.000 por mes</a>
-            </div>
-            <p className="donation-text mt-1">Si no querés comprometerte a una donación mensual, podés hacerlo una sola vez también, del monto que quieras.</p>
-            <div className="buttons">
+              <a target="_blank" href="https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c9380848a8a854e018a9546800b073f" className="button">Donación mensual</a>
               <a target="_blank" href="https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c9380848a6c207d018a708b1e20028b" className="button">Donación única</a>
             </div>
 
-            <h3 className="donation-subtitle">PayPal</h3>
-            <p className="donation-text">Acá podés suscribirte mensualmente o también hacer una donación única del monto que quieras.</p>
+            <h3 className="donation-subtitle">PayPal <span>(USD)</span></h3>
             <p className="donation-text-small">Se pesifica al momento del cobro y se cobran los típicos impuestos.</p>
             <div className="buttons">
-              <a target="_blank" href="https://www.paypal.com/donate/?hosted_button_id=BVJ6LD7YYYFY2" className="button">Ir a PayPal</a>
+              <a target="_blank" href="https://www.paypal.com/donate/?hosted_button_id=BVJ6LD7YYYFY2" className="button">Donación mensual o única</a>
             </div>
 
-            <h3 className="donation-subtitle">Patreon</h3>
-            <p className="donation-text">Se hace con tarjeta, y es un pago mensual en US$ del monto que quieras.</p>
+            <h3 className="donation-subtitle">Stripe <span>(USD)</span></h3>
             <p className="donation-text-small">Se pesifica al momento del cobro y se cobran los típicos impuestos.</p>
             <div className="buttons">
-              <a target="_blank" href="https://patreon.com/carpicoder" className="button">Ir a Patreon</a>
+              <a target="_blank" href="https://donate.stripe.com/aEU5oifsc9oacRadQQ" className="button">Donación única</a>
             </div>
 
-            <h3 className="donation-subtitle">Stripe</h3>
-            <p className="donation-text">Acá podés hacer una donación única en US$ del monto que quieras.</p>
+            <h3 className="donation-subtitle">Patreon <span>(USD)</span></h3>
             <p className="donation-text-small">Se pesifica al momento del cobro y se cobran los típicos impuestos.</p>
             <div className="buttons">
-              <a target="_blank" href="https://donate.stripe.com/aEU5oifsc9oacRadQQ" className="button">Ir a Stripe</a>
+              <a target="_blank" href="https://patreon.com/carpicoder" className="button">Donación mensual</a>
             </div>
 
           </article>
           <article id="resto-del-mundo" className="donation" ref={element => {donationRef.current[1] = element;}}>
-            <h2 className="donation-title">Desde el resto del mundo</h2>
+            <h2 className="donation-title">Desde el resto del mundo 🌎</h2>
 
             <h3 className="donation-subtitle">PayPal</h3>
-            <p className="donation-text">Acá podés suscribirte mensualmente o también hacer una donación única del monto que quieras.</p>
             <div className="buttons">
-              <a target="_blank" href="https://www.paypal.com/donate/?hosted_button_id=BVJ6LD7YYYFY2" className="button">Ir a PayPal</a>
-            </div>
-
-            <h3 className="donation-subtitle">Patreon</h3>
-            <p className="donation-text">Se hace con tarjeta, y es un pago mensual en US$ del monto que quieras.</p>
-            <div className="buttons">
-              <a target="_blank" href="https://patreon.com/carpicoder" className="button">Ir a Patreon</a>
+              <a target="_blank" href="https://www.paypal.com/donate/?hosted_button_id=BVJ6LD7YYYFY2" className="button">Donación mensual o única (USD)</a>
+              <a target="_blank" href="https://www.paypal.com/donate/?hosted_button_id=88DZ3PQXDCG38" className="button">Donación mensual o única (EUR)</a>
             </div>
 
             <h3 className="donation-subtitle">Stripe</h3>
-            <p className="donation-text">Acá podés hacer una donación única en US$ del monto que quieras.</p>
             <div className="buttons">
-              <a target="_blank" href="https://donate.stripe.com/aEU5oifsc9oacRadQQ" className="button">Ir a Stripe</a>
+              <a target="_blank" href="https://donate.stripe.com/aEU5oifsc9oacRadQQ" className="button">Donación única (USD)</a>
+              <a target="_blank" href="https://donate.stripe.com/5kA2c6cg0gQC9EY289" className="button">Donación única (EUR)</a>
+            </div>
+
+            <h3 className="donation-subtitle">Patreon</h3>
+            <div className="buttons">
+              <a target="_blank" href="https://patreon.com/carpicoder" className="button">Donación mensual (USD)</a>
             </div>
           </article>
+          </div>
         </div>
       </section>
     )
