@@ -9,6 +9,7 @@ import CHCourse from "./components/ReviewsCH/CHCourse";
 import Donations from "./components/Donations/Donations";
 import { AnimatePresence } from 'framer-motion';
 import { useEffect } from 'react';
+import NotFound from './components/NotFound';
 
 const App = () => {
 
@@ -25,6 +26,7 @@ const App = () => {
 
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
+            <Route path="*" element={<NotFound />} />
             <Route path="/" element={<Home />} />
             <Route path="/cursos" element={<Courses />} />
             <Route path="/repasos-coderhouse" element={<ReviewsCH />} />

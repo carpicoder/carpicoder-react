@@ -20,9 +20,9 @@ const ChangeLanguage = () => {
 
   return (
     <div className="languages" ref={languagesRef}>
-      <button onClick={() => {lang !== "es" && setLang("es")}}>ES</button>
+      <button onClick={() => {lang !== "es" && setLang("es")}} className={lang === "es" ? "active" : undefined}>ES</button>
       |
-      <button onClick={() => {lang !== "en" && setLang("en")}}>EN</button>
+      <button onClick={() => {lang !== "en" && setLang("en")}} className={lang === "en" ? "active" : undefined}>EN</button>
     </div>
   )
 }

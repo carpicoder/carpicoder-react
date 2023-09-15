@@ -1,4 +1,4 @@
-import { useContext, useLayoutEffect, useRef } from "react";
+import { useContext, useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { LangContext } from "../../../context/LanguageContext";
 import SplitType from "split-type";
@@ -15,6 +15,7 @@ const HeroText = () => {
 
         const docStyle = getComputedStyle(document.documentElement);
         const h1Element = heroTitleH1.current;
+
         const h1Text = new SplitType(h1Element, {
             types: "words, chars",
             charClass: "title-letter"
@@ -95,8 +96,12 @@ const HeroText = () => {
     return (
         <>
             <div className="hero-title">
-                <h1 ref={heroTitleH1} >
-                    Soy Carpi.<br/>Hago contenido sobre desarrollo web.
+                <h1 ref={heroTitleH1} key={lang}>
+                    { lang === "es" ? (
+                        <span>Soy Carpi.<br/>Hago contenido sobre desarrollo web.</span>
+                    ) : (
+                        <span>I'm. Carpi.<br/>I create content about web development.</span>
+                    )}
                 </h1>
             </div>
             <div className="hero-description">
