@@ -1,0 +1,82 @@
+{
+    "global": {
+        "soon": "Em breve",
+        "goBack": "Voltar",
+        "notFound": "Página não encontrada.",
+        "changedRoutes": "Mudei algumas rotas, talvez você queira verificar o menu!",
+        "lookingForCH": "Se você está procurando as avaliações dos cursos de Coderhouse, ",
+        "clickHere": "clique aqui",
+        "courseNotFound": "Curso não encontrado.",
+        "courseWriteToMe": "Escreva para mim em hola@carpicoder.com se quiser que eu carregue vídeos de outro curso."
+    },
+    "pages": {
+        "home": "Início",
+        "courses": "Cursos",
+        "reviews": "Vídeos de avaliação",
+        "donations": "Doações",
+        "notFound": "Página não encontrada"
+    },
+    "header": {
+        "home": "Início",
+        "courses": "Cursos",
+        "reviews": "Avaliações",
+        "donations": "Doações",
+        "soon": "Em breve",
+        "coderhouse": "Coderhouse"
+    },
+    "home": {
+        "hero": {
+            "title1": "Sou Carpi.",
+            "title2": "Crio conteúdo sobre desenvolvimento web.",
+            "text": "Aprendi a criar sites por conta própria e agora quero compartilhar as ferramentas que adquiri ao longo dos anos. Eu sei que pode ser frustrante e desafiador progredir às vezes, por isso crio esses vídeos. Meu objetivo é ajudá-lo a entender melhor as principais linguagens de desenvolvimento de frontend e apoiá-lo em sua jornada de aprendizado."
+        },
+        "stats": {
+            "subscribers": "Inscritos",
+            "videos": "Vídeos",
+            "views": "Visualizações"
+        },
+        "shortcuts": {
+            "youtube": {
+                "title": "YouTube",
+                "text": "Vídeos sobre desenvolvimento web, cobrindo principalmente HTML, CSS, JavaScript e React. Você descobrirá dicas, truques, tutoriais e vários cursos completamente gratuitos."
+            },
+            "discord": {
+                "title": "Discord",
+                "text": "Junte-se à minha Comunidade no Discord, um espaço ideal para conversar com pessoas que estão começando ou desejam compartilhar informações sobre o mundo do desenvolvimento web."
+            },
+            "donations": {
+                "title": "Doações",
+                "text": "Se desejar, você pode apoiar meu conteúdo fazendo uma doação mensal ou única. Isso me ajuda a continuar criando mais e melhores vídeos. ❤️"
+            }
+        }
+    },
+    "reviews": {
+        "title": "Vídeos de avaliação",
+        "subtitle": "Se você está matriculado em Coderhouse, pode encontrar vídeos de avaliação de seus cursos aqui.",
+        "goToButton": "Ir para os vídeos do curso",
+        "courses": {
+            "webDevelopment": {
+                "title": "Curso de Desenvolvimento Web",
+                "topics": ["Prototipagem", "HTML", "CSS", "Box Model", "Flexbox", "Grid", "Media Queries", "Pseudo-classes", "Pseudo-elementos", "Transformações", "Animações", "Bootstrap", "Git", "GitHub", "SASS", "SEO", "Servidores"]
+            },
+            "javascript": {
+                "title": "Curso de JavaScript",
+                "topics": ["Variáveis", "Loops", "Funções", "Objetos", "Arrays", "DOM", "Eventos", "LocalStorage", "Bibliotecas", "Assincronia", "Fetch"]
+            },
+            "react": {
+                "title": "Curso de React",
+                "topics": ["JSX", "Componentes", "Promessas", "Assincronia", "APIs", "Hooks", "Routing", "Eventos", "Contexto", "Firebase"]
+            }
+        }
+    },
+    "donations": {
+        "title": "Doações",
+        "subtitle": "Você pode apoiar meu conteúdo fazendo uma pequena contribuição mensal ou única, para ajudar a criar mais e melhor conteúdo.",
+        "fromArgentina": "Da Argentina 🇦🇷",
+        "fromTheRest": "Do resto do mundo 🌎",
+        "monthly": "Doação Mensal",
+        "oneTime": "Doação Única",
+        "monthlyOrOneTime": "Doação Mensal ou Única",
+        "pesifies": "Será convertido para ARS no momento do pagamento e serão aplicados impostos padrão."
+    }
+}

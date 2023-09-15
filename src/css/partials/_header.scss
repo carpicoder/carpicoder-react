@@ -63,6 +63,7 @@
         display: flex;
         gap: .5rem;
         align-items: center;
+        position: relative;
 
         @include query(700) {
             display: none;
@@ -76,7 +77,7 @@
             font-family: $ff-title;
             transition: .2s;
             padding: .1rem .5rem;
-            border-radius: 100vmax;
+            border-radius: .5rem;
             border: 1px solid transparent;
 
             &.active {
@@ -88,6 +89,42 @@
 
         b {
             color: $clr-primary;
+        }
+
+        &-open-menu {
+            color: $clr-primary;
+            width: 1.5rem;
+            height: 1.5rem;
+            cursor: pointer;
+        }
+
+        &-menu {
+            position: absolute;
+            top: calc(100% + .5rem);
+            right: 0;
+            background-color: $clr-light;
+            border: 1px solid $clr-primary;
+            padding: 1rem;
+            border-radius: .5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transform: scale(0);
+            transition: .25s;
+            transform-origin: top right;
+
+            @include query(700) {
+                left: calc(100% + .5rem);
+                top: 0;
+                transform-origin: top left;
+                width: auto;
+                right: unset;
+            }
+
+            &.active {
+                transform: scale(1);
+                transition-timing-function: $cubic-bezier;
+            }
         }
     }
 
@@ -129,6 +166,7 @@
             margin-top: 3rem;
             display: flex;
             flex-direction: column;
+            width: 100%;
 
             &-list {
                 flex-grow: 1;
@@ -136,6 +174,10 @@
                 padding-block: 1rem;
                 justify-content: space-evenly;
                 font-size: 2rem;
+            }
+
+            &-item {
+                width: max-content;
             }
 
             &-link {
@@ -146,6 +188,7 @@
                     transform: scale(1) translateY(-50%);
                     left: calc(100% + 1rem);
                     padding: .25em .5em;
+                    width: max-content;
                 }
             }
         }

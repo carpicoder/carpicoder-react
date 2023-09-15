@@ -25,7 +25,7 @@ const ReviewsCH = () => {
     courseRef.current.forEach((course, index) => {
       gsap.from(course, {
         opacity: 0,
-        scale: Math.random() * 2,
+        scale: 0,
         translateY: Math.floor(Math.random() * 401) - 200,
         ease: "back.out(2)",
         delay: (.15 * index) + .6,

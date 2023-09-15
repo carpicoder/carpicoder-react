@@ -33,10 +33,6 @@
   white-space: pre-wrap;
 }
 
-html {
-  overflow-x: hidden;
-}
-
 body {
   background-color: var(--clr-light);
   color: var(--clr-dark);
@@ -232,6 +228,7 @@ p {
   display: flex;
   gap: 0.5rem;
   align-items: center;
+  position: relative;
 }
 @media screen and (max-width: 700px) {
   .header .languages {
@@ -246,7 +243,7 @@ p {
   font-family: var(--ff-title);
   transition: 0.2s;
   padding: 0.1rem 0.5rem;
-  border-radius: 100vmax;
+  border-radius: 0.5rem;
   border: 1px solid transparent;
 }
 .header .languages button.active {
@@ -256,6 +253,40 @@ p {
 }
 .header .languages b {
   color: var(--clr-primary);
+}
+.header .languages-open-menu {
+  color: var(--clr-primary);
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+.header .languages-menu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  background-color: var(--clr-light);
+  border: 1px solid var(--clr-primary);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: scale(0);
+  transition: 0.25s;
+  transform-origin: top right;
+}
+@media screen and (max-width: 700px) {
+  .header .languages-menu {
+    left: calc(100% + 0.5rem);
+    top: 0;
+    transform-origin: top left;
+    width: auto;
+    right: unset;
+  }
+}
+.header .languages-menu.active {
+  transform: scale(1);
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .header .open-menu,
 .header .close-menu {
@@ -291,6 +322,7 @@ p {
   margin-top: 3rem;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 .header.menu-active .nav-list {
   flex-grow: 1;
@@ -299,12 +331,18 @@ p {
   justify-content: space-evenly;
   font-size: 2rem;
 }
+.header.menu-active .nav-item {
+  width: -moz-max-content;
+  width: max-content;
+}
 .header.menu-active .nav-link::after {
   font-size: 0.5em;
   top: 50%;
   transform: scale(1) translateY(-50%);
   left: calc(100% + 1rem);
   padding: 0.25em 0.5em;
+  width: -moz-max-content;
+  width: max-content;
 }
 .header.menu-active .header-logo {
   display: none;
