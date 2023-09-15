@@ -10,12 +10,12 @@ import { useTranslation } from "react-i18next"
 
 
 const ReviewsCH = () => {
-  
+
   const [tt, i18n] = useTranslation("global");
 
   useEffect(() => {
-    document.title = 'Carpi Coder | Videítos de repaso';
-  }, []);
+    document.title = 'Carpi Coder | ' + tt("pages.reviews");
+  }, [i18n.language]);
 
   const courseRef = useRef([]);
   gsap.registerPlugin(ScrollTrigger);

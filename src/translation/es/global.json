@@ -9,6 +9,13 @@
         "courseNotFound": "Curso no encontrado.",
         "courseWriteToMe": "Escribime a hola@carpicoder.com si querés que suba los videítos de otro curso."
     },
+    "pages": {
+        "home": "Inicio",
+        "courses": "Cursos",
+        "reviews": "Videítos de repaso",
+        "donations": "Donaciones",
+        "notFound": "Página no encontrada"
+    },
     "header": {
         "home": "Inicio",
         "courses": "Cursos",

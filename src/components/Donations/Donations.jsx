@@ -11,6 +11,10 @@ const Donations = () => {
 
   const [tt, i18n] = useTranslation("global");
 
+  useEffect(() => {
+    document.title = 'Carpi Coder | ' + tt("pages.donations");
+  }, [i18n.language]);
+
   const donationRef = useRef([]);
   gsap.registerPlugin(ScrollTrigger);
 
@@ -27,10 +31,6 @@ const Donations = () => {
     });
 
   }, [i18n.language])
-
-  useEffect(() => {
-    document.title = 'Carpi Coder | Donaciones';
-  }, []);
 
     return (
       <section className="donations inner-section">

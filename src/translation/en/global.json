@@ -9,6 +9,13 @@
         "courseNotFound": "Course not found.",
         "courseWriteToMe": "Write to me at hola@carpicoder.com if you want me to upload videos from another course."
     },
+    "pages": {
+        "home": "Home",
+        "courses": "Courses",
+        "reviews": "Review videos",
+        "donations": "Donations",
+        "notFound": "Page not found"
+    },
     "header": {
         "home": "Home",
         "courses": "Courses",

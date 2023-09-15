@@ -24,8 +24,8 @@ const CHCourse = () => {
 
     
     useEffect(() => {
-        document.title = course ? 'Carpi Coder | ' + course.titleFull : 'Carpi Coder | Videítos de repaso';
-    }, [course]);
+        document.title = course ? 'Carpi Coder | ' + course.titleFull : 'Carpi Coder | ' + tt("pages.reviews");
+    }, [course, i18n.language]);
 
     
 

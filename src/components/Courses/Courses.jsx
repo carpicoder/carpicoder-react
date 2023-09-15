@@ -7,11 +7,12 @@ import { useTranslation } from "react-i18next";
 
 const Cursos = () => {
 
+
   const [tt, i18n] = useTranslation("global");
 
   useEffect(() => {
-    document.title = 'Carpi Coder | Cursos';
-  }, []);
+    document.title = 'Carpi Coder | ' + tt("pages.courses");
+  }, [i18n.language]);
 
   return (
     <section className="inner-section">
