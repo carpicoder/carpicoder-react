@@ -64,6 +64,10 @@
         gap: .5rem;
         align-items: center;
 
+        @include query(700) {
+            display: none;
+        }
+
         button {
             background-color: transparent;
             cursor: pointer;
@@ -122,7 +126,7 @@
         }
 
         .nav {
-            flex-grow: 1;
+            margin-top: 3rem;
             display: flex;
             flex-direction: column;
 
@@ -148,6 +152,10 @@
 
         .header-logo {
             display: none;
+        }
+
+        .languages {
+            display: flex;
         }
     }
 }

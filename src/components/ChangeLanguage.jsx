@@ -2,7 +2,7 @@ import gsap from 'gsap';
 import React, { useLayoutEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next';
 
-const ChangeLanguage = () => {
+const ChangeLanguage = ({setMenuActive, menuActive}) => {
 
   const [tt, i18n] = useTranslation("global");
 
@@ -14,12 +14,12 @@ const ChangeLanguage = () => {
             ease: "back.out(2)",
             delay: 1.5
           })
-    }, [])
+    }, [menuActive])
 
     const handleChangeLanguage = (lang) => {
       i18n.changeLanguage(lang);
+      setMenuActive(false);
     }
-    console.log(i18n.language);
 
 
 

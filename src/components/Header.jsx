@@ -16,20 +16,14 @@ const Header = ({ location }) =>{
 
   const [tt, i18n] = useTranslation("global");
 
+  const [menuActive, setMenuActive] = useState(false);
+
   useLayoutEffect(() => {
 
     gsap.from(headerRef.current, {
       scale: 0,
       ease: "back.out(2)",
       delay: .75
-    })
-
-    gsap.from(navItemRef.current, {
-      y: -100,
-      opacity: 0,
-      stagger: .02,
-      ease: "back.out(2)",
-      delay: 1.25
     })
 
     const docStyle = getComputedStyle(document.documentElement);
@@ -45,6 +39,13 @@ const Header = ({ location }) =>{
       ease: "back.out(2)",
       stagger: .02,
       delay: 1
+    })
+    gsap.from(navItemRef.current, {
+      y: -100,
+      opacity: 0,
+      stagger: .02,
+      ease: "back.out(2)",
+      delay: 1.25
     })
 
     logoText.chars.forEach((char) => {
@@ -73,7 +74,15 @@ const Header = ({ location }) =>{
 
   }, [i18n.language])
 
-  const [menuActive, setMenuActive] = useState(false);
+  useLayoutEffect(() => {
+    gsap.from(navItemRef.current, {
+      y: -100,
+      opacity: 0,
+      stagger: .02,
+      ease: "back.out(2)",
+      delay: 0
+    })
+  }, [menuActive])
 
   const handleClickMenu = () => {
     setMenuActive(!menuActive);
@@ -117,7 +126,7 @@ const Header = ({ location }) =>{
           </nav>
           <List className="open-menu" onClick={handleClickMenu} />
           <X className="close-menu" onClick={handleClickMenu} />
-          <ChangeLanguage />
+          <ChangeLanguage setMenuActive={setMenuActive} menuActive={menuActive} />
        </header>
     )
 };
