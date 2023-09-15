@@ -1,10 +1,13 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLayoutEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 
 const Shortcuts = () => {
+
+    const [tt, i18n] = useTranslation("global");
 
     const scRef = useRef([]);
     gsap.registerPlugin(ScrollTrigger);
@@ -51,16 +54,16 @@ const Shortcuts = () => {
         <div className="container">
             <section className="shortcuts">
                 <a target="_blank" href="https://youtube.com/carpicoder" className="shortcut shortcut-youtube" ref={element => {scRef.current[0] = element;}}>
-                    <h2 className="shortcut-title">YouTube</h2>
-                    <p className="shortcut-text">Videítos sobre desarrollo web, principalmente de HTML, CSS, JavaScript y React. Vas a encontrar tips, truquitos, tutoriales y varios cursos <strong>totalmente gratuitos</strong>.</p>
+                    <h2 className="shortcut-title">{tt("home.shortcuts.youtube.title")}</h2>
+                    <p className="shortcut-text">{tt("home.shortcuts.youtube.text")}</p>
                 </a>
                 <a target="_blank" href="https://discord.gg/wHKxGbMt4A" className="shortcut shortcut-discord" ref={element => {scRef.current[1] = element;}}>
-                    <h2 className="shortcut-title">Discord</h2>
-                    <p className="shortcut-text">Unite a mi Comunidad de Discord, un espacio ideal para charlar con personas que están comenzando o tienen ganas de compartir información sobre el mundo del desarrollo web.</p>
+                    <h2 className="shortcut-title">{tt("home.shortcuts.discord.title")}</h2>
+                    <p className="shortcut-text">{tt("home.shortcuts.discord.text")}</p>
                 </a>
                 <Link to="/donaciones" className="shortcut shortcut-donations" ref={element => {scRef.current[2] = element;}}>
-                    <h2 className="shortcut-title">Donaciones</h2>
-                    <p className="shortcut-text">Si querés, podés apoyar mi contenido haciendo un aporte mensual o único. Esto me ayuda a seguir creando <strong>más y mejores videos</strong>. ❤️</p>
+                    <h2 className="shortcut-title">{tt("home.shortcuts.donations.title")}</h2>
+                    <p className="shortcut-text">{tt("home.shortcuts.donations.text")}</p>
                 </Link>
             </section>
         </div>

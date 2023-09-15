@@ -2,8 +2,11 @@ import { useLayoutEffect, useRef, useState } from "react";
 import carpiPicture from "../../../assets/carpi-foto.png";
 import carpiPicture2 from "../../../assets/carpi-foto-2.png";
 import gsap from "gsap";
+import { useTranslation } from "react-i18next";
 
 const HeroAvatar = () => {
+
+    const [tt, i18n] = useTranslation("global");
 
     const [isHovered, setIsHovered] = useState(false);
   
@@ -26,7 +29,7 @@ const HeroAvatar = () => {
         ease: "back.out(2)"
       });
   
-    }, []);
+    }, [i18n.language]);
   
     const handleAvatarContainerEnter = () => {
       const rotateDegree = Math.random() * 20 - 10;

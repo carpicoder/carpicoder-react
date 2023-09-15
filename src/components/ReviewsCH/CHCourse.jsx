@@ -5,9 +5,12 @@ import { searchCHCourseById } from "../../helpers/searchCourse";
 import CHVideo from "./CHVideo";
 import transition from "../../helpers/transition";
 import InnerSectionTitle from "../InnerSectionTitle";
+import { useTranslation } from "react-i18next";
 
 
 const CHCourse = () => {
+
+    const [tt, i18n] = useTranslation("global");
 
     const [course, setCourse] = useState(null);
     const courseId = useParams().course;
@@ -54,9 +57,9 @@ const CHCourse = () => {
             </> :
             <>
                 <div className="not-found">
-                    <h1>Curso no encontrado</h1>
-                    <p>Escribime a hola@carpicoder.com si querés que suba los videítos de otro curso.</p>
-                    <Link to="/repasos-coderhouse" className="inner-section-go-back-link"><ArrowReturnLeft /> Volver</Link>
+                    <h1>{tt("global.courseNotFound")}</h1>
+                    <p>{tt("global.courseWriteToMe")}</p>
+                    <Link to="/repasos-coderhouse" className="inner-section-go-back-link"><ArrowReturnLeft /> {tt("global.goBack")}</Link>
                 </div>
             </>
         }

@@ -6,9 +6,12 @@ import InnerSectionSubtitle from "../InnerSectionSubtitle"
 import gsap from "gsap"
 import { useEffect, useLayoutEffect, useRef } from "react"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { useTranslation } from "react-i18next"
 
 
 const ReviewsCH = () => {
+  
+  const [tt, i18n] = useTranslation("global");
 
   useEffect(() => {
     document.title = 'Carpi Coder | Videítos de repaso';
@@ -23,42 +26,39 @@ const ReviewsCH = () => {
       gsap.from(course, {
         opacity: 0,
         scale: Math.random() * 2,
-        x: Math.floor(Math.random() * 401) - 200,
+        translateY: Math.floor(Math.random() * 401) - 200,
         ease: "back.out(2)",
-        delay: .75,
-        scrollTrigger: {
-          trigger: course
-        }
+        delay: (.15 * index) + .6,
       })
     });
 
-  }, [])
+  }, [i18n.language])
   
   return (
     <section className="reviews inner-section">
       <div className="container">
-        <InnerSectionTitle text="Videítos de repaso" />
-        <InnerSectionSubtitle text="Si estás cursando en Coderhouse, podés encontrar videítos de repaso de sus cursos acá."/>
+        <InnerSectionTitle text={tt("reviews.title")} key={i18n.language} />
+        <InnerSectionSubtitle text={tt("reviews.subtitle")}/>
         <div className="course-reviews">
           <article className="course-review" ref={element => {courseRef.current[0] = element;}}>
-            <h2>Curso de Desarrollo Web</h2>
-            <Topics topics={["Prototipado", "HTML", "CSS", "Box Model", "Flexbox", "Grid", "Media queries", "Pseudoclases", "Pseudoelementos", "Transformaciones", "Animaciones", "Bootstrap", "Git", "GitHub", "SASS", "SEO", "Servidores"]} />
+            <h2>{tt("reviews.courses.webDevelopment.title")}</h2>
+            <Topics topics={tt("reviews.courses.webDevelopment.topics", { returnObjects: true })} />
             <div className="buttons">
-              <Link to="/repasos-coderhouse/desarrollo-web" className="button button-orange">Ir a los videítos del curso</Link>
+              <Link to="/repasos-coderhouse/desarrollo-web" className="button button-orange">{tt("reviews.goToButton")}</Link>
             </div>
           </article>
           <article className="course-review" ref={element => {courseRef.current[1] = element;}}>
-            <h2>Curso de JavaScript</h2>
-            <Topics topics={["Variables", "Ciclos", "Funciones", "Objetos", "Arrays", "DOM", "Eventos", "LocalStorage", "Librerías", "Asincronía", "Fetch"]} />
+            <h2>{tt("reviews.courses.javascript.title")}</h2>
+            <Topics topics={tt("reviews.courses.javascript.topics", { returnObjects: true })} />
             <div className="buttons">
-              <Link to="/repasos-coderhouse/javascript" className="button button-orange">Ir a los videítos del curso</Link>
+              <Link to="/repasos-coderhouse/javascript" className="button button-orange">{tt("reviews.goToButton")}</Link>
             </div>
           </article>
           <article className="course-review" ref={element => {courseRef.current[2] = element;}}>
-            <h2>Curso de React</h2>
-            <Topics topics={["JSX", "Componentes", "Promesas", "Asincronía", "APIs", "Hooks", "Routing", "Eventos", "Context", "Firebase"]} />
+            <h2>{tt("reviews.courses.react.title")}</h2>
+            <Topics topics={tt("reviews.courses.react.topics", { returnObjects: true })} />
             <div className="buttons">
-              <Link to="/repasos-coderhouse/react" className="button button-orange">Ir a los videítos del curso</Link>
+              <Link to="/repasos-coderhouse/react" className="button button-orange">{tt("reviews.goToButton")}</Link>
             </div>
           </article>
         </div>

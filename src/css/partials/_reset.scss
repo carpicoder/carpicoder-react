@@ -13,6 +13,10 @@
   white-space: pre-wrap;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background-color: $clr-light;
   color: $clr-dark;

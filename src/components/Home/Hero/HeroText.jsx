@@ -1,11 +1,11 @@
-import { useContext, useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
-import { LangContext } from "../../../context/LanguageContext";
 import SplitType from "split-type";
+import { useTranslation } from "react-i18next";
 
 const HeroText = () => {
 
-    const { lang } = useContext(LangContext);
+    const [tt, i18n] = useTranslation("global");
 
     const heroTitleH1 = useRef(null);
     const heroDescriptionP = useRef();
@@ -89,23 +89,20 @@ const HeroText = () => {
         });
 
           
-    }, [lang])
+    }, [i18n.language])
     
 
 
     return (
         <>
             <div className="hero-title">
-                <h1 ref={heroTitleH1} key={lang}>
-                    { lang === "es" ? (
-                        <span>Soy Carpi.<br/>Hago contenido sobre desarrollo web.</span>
-                    ) : (
-                        <span>I'm. Carpi.<br/>I create content about web development.</span>
-                    )}
+                <h1 ref={heroTitleH1} key={i18n.language}>
+                    {tt("home.hero.title1")}<br/>
+                    {tt("home.hero.title2")}
                 </h1>
             </div>
             <div className="hero-description">
-                <p ref={heroDescriptionP}>Aprendí a hacer sitios web por mi cuenta y ahora quiero compartir las herramientas que adquirí a lo largo de los años. Sé que a veces puede ser frustrante y difícil avanzar, por eso creo estos videítos. Mi objetivo es ayudarte a comprender mejor los principales lenguajes de desarrollo frontend y acompañarte en tu camino de aprendizaje.</p>
+                <p ref={heroDescriptionP} key={i18n.language}>{tt("home.hero.text")}</p>
             </div>
         </>
     )

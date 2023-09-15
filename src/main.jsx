@@ -2,40 +2,48 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { LangProvider } from './context/LanguageContext.jsx'
 
 import global_en from "./translation/en/global.json"
 import global_es from "./translation/es/global.json"
 import i18next from 'i18next'
 import { I18nextProvider } from 'react-i18next'
+import LanguageDetector from 'i18next-browser-languagedetector';
 
-i18next.init({
-  interpolation: {escapeValue: true},
-  react:{
-    bindI18n: 'languageChanged',
-    transSupportBasicHtmlNodes: true,
-    transKeepBasicHtmlNodesFor: ['br', 'strong', 'i'],
-    useSuspense: false //   <---- this will do the magic
-  },
-  lng: "es",
-  resources: {
-    es: {
-      global: global_es
+i18next
+  .use(LanguageDetector)
+  .init({
+    fallbackLng: 'es',
+    resources: {
+      es: {
+        global: global_es
+      },
+      en: {
+        global: global_en
+      }
     },
-    en: {
-      global: global_en
-    }
+    detection: {
+      order: ['localStorage', 'navigator'],
+      convertDetectedLanguage: (lng) => lng.split('-')[0],
+    },
+    
+    lookupLocalStorage: 'lng',
+  });
+
+  const detectedLanguage = i18next.language;
+  if (detectedLanguage.split('-')[0] !== 'es' && detectedLanguage.split('-')[0] !== 'en') {
+    // Establece manualmente 'es' como el idioma predeterminado en localStorage
+    i18next.language = "es";
+    localStorage.setItem('i18nextLng', 'es');
   }
-})
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   // <React.StrictMode>
-    <LangProvider>
+    <I18nextProvider i18n={i18next}>
       <Router>
         <Routes>
           <Route path="*" element={<App />} />
         </Routes>
       </Router>
-    </LangProvider>
+    </I18nextProvider>
   // </React.StrictMode>,
 )

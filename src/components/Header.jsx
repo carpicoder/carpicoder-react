@@ -4,6 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 import SplitType from "split-type";
 import ChangeLanguage from "./ChangeLanguage";
 import { List, X } from 'react-bootstrap-icons';
+import { useTranslation } from "react-i18next";
 
 
 
@@ -12,6 +13,8 @@ const Header = ({ location }) =>{
   const headerRef = useRef();
   const logoRef = useRef();
   const navItemRef = useRef([]);
+
+  const [tt, i18n] = useTranslation("global");
 
   useLayoutEffect(() => {
 
@@ -68,7 +71,7 @@ const Header = ({ location }) =>{
       })
     });
 
-  }, [])
+  }, [i18n.language])
 
   const [menuActive, setMenuActive] = useState(false);
 
@@ -92,29 +95,29 @@ const Header = ({ location }) =>{
             <ul className="nav-list">
               <li className="nav-item" ref={element => {navItemRef.current[0] = element;}}>
                 <NavLink to="/" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
-                  Inicio
+                  {tt("header.home")}
                 </NavLink>
               </li>
               <li className="nav-item" ref={element => {navItemRef.current[1] = element;}}>
-                <NavLink to="/cursos" className="nav-link" data-tooltip="Próximamente">
-                  Cursos
+                <NavLink to="/cursos" className="nav-link" data-tooltip={tt("header.soon")}>
+                  {tt("header.courses")}
                 </NavLink>
               </li>
               <li className="nav-item" ref={element => {navItemRef.current[2] = element;}}>
-                <NavLink to="/repasos-coderhouse" className="nav-link" data-tooltip="Coderhouse">
-                  Repasos
+                <NavLink to="/repasos-coderhouse" className="nav-link" data-tooltip={tt("header.coderhouse")}>
+                  {tt("header.reviews")}
                 </NavLink>
               </li>
               <li className="nav-item" ref={element => {navItemRef.current[3] = element;}}>
                 <NavLink to="/donaciones" className="nav-link">
-                  Donaciones
+                  {tt("header.donations")}
                 </NavLink>
               </li>
             </ul>
           </nav>
           <List className="open-menu" onClick={handleClickMenu} />
           <X className="close-menu" onClick={handleClickMenu} />
-          {/* <ChangeLanguage /> */}
+          <ChangeLanguage />
        </header>
     )
 };
