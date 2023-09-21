@@ -615,7 +615,6 @@ p {
 .donations .donation-subtitle img {
   max-height: 2rem;
   max-width: 2rem;
-  border-radius: 0.5rem;
   margin-right: 0.5rem;
 }
 @media screen and (max-width: 600px) {
