@@ -608,7 +608,15 @@ p {
 }
 .donations .donation-subtitle {
   font-size: 1.5rem;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+}
+.donations .donation-subtitle img {
+  max-height: 2rem;
+  max-width: 2rem;
+  border-radius: 0.5rem;
+  margin-right: 0.5rem;
 }
 @media screen and (max-width: 600px) {
   .donations .donation-subtitle {
@@ -616,7 +624,7 @@ p {
   }
 }
 .donations .donation-subtitle:first-of-type {
-  margin-top: 0.5rem;
+  margin-top: 1.5rem;
 }
 .donations .donation-subtitle > span {
   font-family: var(--ff-text);

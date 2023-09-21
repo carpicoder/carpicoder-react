@@ -17,14 +17,23 @@
 
         &-subtitle {
             font-size: 1.5rem;
-            margin-top: 1.5rem;
+            margin-top: 2rem;
+            display: flex;
+            align-items: center;
+
+            img {
+                max-height: 2rem;
+                max-width: 2rem;
+                border-radius: .5rem;
+                margin-right: .5rem;
+            }
 
             @include query(600) {
                 font-size: 1.25rem;
             }
 
             &:first-of-type {
-                margin-top: .5rem;
+                margin-top: 1.5rem;
             }
 
             > span {
