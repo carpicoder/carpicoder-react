@@ -64,8 +64,15 @@ const Header = ({ location }) =>{
             translateY: 0,
             delay: .3,
             ease: "back.out(5)",
+          })
+          gsap.to(char, {
+            delay: .4,
+            ease: "back.out(1)",
             color: char.textContent !== "." ? docStyle.getPropertyValue("--clr-text") : docStyle.getPropertyValue("--clr-primary"),
+          })
+          gsap.to(char, {
             clearProps: "color",
+            delay: .45
           })
       })
     });

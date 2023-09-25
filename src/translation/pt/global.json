@@ -74,9 +74,9 @@
         "subtitle": "Você pode apoiar meu conteúdo fazendo uma pequena contribuição mensal ou única, para ajudar a criar mais e melhor conteúdo.",
         "fromArgentina": "Da Argentina 🇦🇷",
         "fromTheRest": "Do resto do mundo 🌎",
-        "monthly": "Doação Mensal",
-        "oneTime": "Doação Única",
-        "monthlyOrOneTime": "Doação Mensal ou Única",
+        "monthly": "Doação mensal",
+        "oneTime": "Doação única",
+        "monthlyOrOneTime": "Doação mensal ou única",
         "pesifies": "Será convertido para ARS no momento do pagamento e serão aplicados impostos padrão."
     }
 }
