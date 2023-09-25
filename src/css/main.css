@@ -126,7 +126,7 @@ p {
   height: 100lvh;
   z-index: 9999999999;
   transform-origin: bottom;
-  background-color: var(--clr-text);
+  background-color: var(--clr-primary);
 }
 
 .transition-slide-out {
