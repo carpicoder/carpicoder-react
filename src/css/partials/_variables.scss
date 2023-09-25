@@ -3,22 +3,46 @@
 
 :root {
   scroll-behavior: smooth;
+
   --ff-title: 'Bricolage Grotesque', sans-serif;
   --ff-text: 'Rubik', sans-serif;
+
+  --clr-text: #1c1c1c;
+  --clr-text-transparent: rgba(28, 28, 28, .8);
+  --clr-bg: #f2ebd9;
+  --clr-bg-transparent: rgba(242, 235, 217, .8);
+
   --clr-dark: #1c1c1c;
+  --clr-dark-transparent: rgba(28, 28, 28, .8);
   --clr-light: #f2ebd9;
   --clr-light-transparent: rgba(242, 235, 217, .8);
+
   --clr-discord: #5865f2;
   --clr-youtube: #ff0000;
   --clr-primary: #ff3c00;
   --clr-primary-transparent: #ff3c0080;
+
+  &.dark-mode {
+    --clr-text: #f2ebd9;
+    --clr-text-transparent: rgba(242, 235, 217, .8);
+    --clr-bg: #1c1c1c;
+    --clr-bg-transparent: rgba(28, 28, 28, .8);
+  }
 }
 
 $ff-title: var(--ff-title);
 $ff-text: var(--ff-text);
+
+$clr-text: var(--clr-text);
+$clr-text-transparent: var(--clr-text-transparent);
+$clr-bg: var(--clr-bg);
+$clr-bg-transparent: var(--clr-bg-transparent);
+
 $clr-dark: var(--clr-dark);
+$clr-dark-transparent: var(--clr-dark-transparent);
 $clr-light: var(--clr-light);
 $clr-light-transparent: var(--clr-light-transparent);
+
 $clr-discord: var(--clr-discord);
 $clr-youtube: var(--clr-youtube);
 $clr-primary: var(--clr-primary);

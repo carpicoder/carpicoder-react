@@ -6,12 +6,20 @@
         border: 1px solid $clr-primary;
         border-radius: 1rem;
 
+        @include query(650) {
+            padding: 2rem;
+        }
+
         &-title {
             font-size: 2rem;
             margin-bottom: 1rem;
 
             @include query(600) {
                 font-size: 2rem;
+            }
+
+            @include query(500) {
+                font-size: 1.5rem;
             }
         }
 
@@ -25,6 +33,10 @@
                 max-height: 2rem;
                 max-width: 2rem;
                 margin-right: .5rem;
+
+                &.rounded {
+                    border-radius: .5rem;
+                }
             }
 
             @include query(600) {

@@ -6,7 +6,7 @@
 
 *::selection {
   background-color: $clr-primary;
-  color: $clr-dark;
+  color: $clr-text;
 }
 
 #root {
@@ -14,8 +14,8 @@
 }
 
 body {
-  background-color: $clr-light;
-  color: $clr-dark;
+  background-color: $clr-bg;
+  color: $clr-text;
   font-family: $ff-text;
   overflow-x: hidden;
 }
@@ -52,7 +52,7 @@ p {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  min-height: 100dvh;
+  min-height: 100lvh;
 }
 
 .not-found {

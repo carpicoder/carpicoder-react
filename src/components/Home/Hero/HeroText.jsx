@@ -32,11 +32,9 @@ const HeroText = () => {
                 duration: .75
             });
             gsap.from(char, {
-                color: "#" + Math.floor(Math.random()*16777215).toString(16),
                 delay: ((Math.floor(Math.random() * 16) + 5) / 10) + .25,
                 ease: "back.out(3)",
             })
-
 
             char.addEventListener("mouseenter", () => {
                 gsap.to(char, {
@@ -47,7 +45,7 @@ const HeroText = () => {
                     ease: "back.out",
                     scale: (Math.floor(Math.random() * 8) + 1) * 0.25,
                 })
-                gsap.to(char, {
+                colorChange = gsap.to(char, {
                     color: "#" + Math.floor(Math.random()*16777215).toString(16),
                     duration: .1,
                     ease: "back.out",
@@ -64,9 +62,9 @@ const HeroText = () => {
                     scale: 1
                 })
                 gsap.to(char, {
-                    color: docStyle.getPropertyValue("--clr-dark"),
                     delay: Math.random() * (3 - 1.5) + 1.5,
                     duration: .5,
+                    clearProps: "color",
                     ease: "back.out",
                 })
             })

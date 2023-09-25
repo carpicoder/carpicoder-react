@@ -47,7 +47,7 @@ const Donations = () => {
             <h2 className="donation-title">{tt("donations.fromArgentina")}</h2>
 
             <h3 className="donation-subtitle">
-            <img src={logoCafecito} alt="Cafecito logo" />
+            <img className="rounded" src={logoCafecito} alt="Cafecito logo" />
               Cafecito <span>(ARS)</span>
               </h3>
             <div className="buttons">
@@ -73,7 +73,7 @@ const Donations = () => {
             </div>
 
             <h3 className="donation-subtitle">
-              <img src={logoStripe} alt="Stripe logo" />
+              <img className="rounded" src={logoStripe} alt="Stripe logo" />
               Stripe <span>(USD)</span>
               </h3>
             <p className="donation-text-small">{tt("donations.pesifies")}</p>
@@ -104,7 +104,7 @@ const Donations = () => {
             </div>
 
             <h3 className="donation-subtitle">
-              <img src={logoStripe} alt="Stripe logo" />
+              <img className="rounded" src={logoStripe} alt="Stripe logo" />
               Stripe
               </h3>
             <div className="buttons">

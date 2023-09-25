@@ -5,6 +5,7 @@ import SplitType from "split-type";
 import ChangeLanguage from "./ChangeLanguage";
 import { List, X } from 'react-bootstrap-icons';
 import { useTranslation } from "react-i18next";
+import ColorMode from "./ColorMode";
 
 
 
@@ -50,10 +51,6 @@ const Header = ({ location }) =>{
 
     logoText.chars.forEach((char) => {
 
-      gsap.set(char, {
-        color: char.textContent !== "." ? docStyle.getPropertyValue("--clr-dark") : docStyle.getPropertyValue("--clr-primary"),
-      })
-
       char.addEventListener("mouseenter", () => {
           gsap.to(char, {
             translateY: -10,
@@ -67,7 +64,8 @@ const Header = ({ location }) =>{
             translateY: 0,
             delay: .3,
             ease: "back.out(5)",
-            color: char.textContent !== "." ? docStyle.getPropertyValue("--clr-dark") : docStyle.getPropertyValue("--clr-primary"),
+            color: char.textContent !== "." ? docStyle.getPropertyValue("--clr-text") : docStyle.getPropertyValue("--clr-primary"),
+            clearProps: "color",
           })
       })
     });
@@ -99,7 +97,7 @@ const Header = ({ location }) =>{
 
     return (
        <header className={menuActive ? 'header menu-active' : 'header'} ref={headerRef}>
-          <Link to="/" className="header-logo" ref={logoRef}>CarpiCoder.</Link>
+          <Link to="/" className="header-logo" ref={logoRef}>CarpiCoder<span className="dot">.</span></Link>
           <nav className="nav">
             <ul className="nav-list">
               <li className="nav-item" ref={element => {navItemRef.current[0] = element;}}>
@@ -126,7 +124,10 @@ const Header = ({ location }) =>{
           </nav>
           <List className="open-menu" onClick={handleClickMenu} />
           <X className="close-menu" onClick={handleClickMenu} />
-          <ChangeLanguage setMenuActive={setMenuActive} menuActive={menuActive} />
+          <div className="header-buttons">
+            <ChangeLanguage setMenuActive={setMenuActive} menuActive={menuActive} />
+            <ColorMode menuActive={menuActive} />
+          </div>
        </header>
     )
 };
