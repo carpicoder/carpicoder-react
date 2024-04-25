@@ -1,0 +1,94 @@
+{
+    "clases": [
+        {
+            "id": "clase-01",
+            "duracion": "1 hora",
+            "nombre": "Presentación e instalación de herramientas"
+        },
+        {
+            "id": "clase-02",
+            "duracion": "2 horas",
+            "nombre": "Intro a HTML y sintaxis"
+        },
+        {
+            "id": "clase-03",
+            "duracion": "2 horas",
+            "nombre": "HTML +"
+        },
+        {
+            "id": "clase-04",
+            "duracion": "1 hora",
+            "nombre": "Resolución de actividades en vivo y consultas"
+        },
+        {
+            "id": "clase-05",
+            "duracion": "2 horas",
+            "nombre": "Git + GitHub"
+        },
+        {
+            "id": "clase-06",
+            "duracion": "2 horas",
+            "nombre": "Intro a CSS y sintaxis"
+        },
+        {
+            "id": "clase-07",
+            "duracion": "1 hora",
+            "nombre": "Resolución de actividades en vivo y consultas"
+        },
+        {
+            "id": "clase-08",
+            "duracion": "2 horas",
+            "nombre": "Background, Gradientes, Tipografías y más"
+        },
+        {
+            "id": "clase-09",
+            "duracion": "2 horas",
+            "nombre": "Box Model, Pseudoclases, Pseudoelementos y Position"
+        },
+        {
+            "id": "clase-10",
+            "duracion": "1 hora",
+            "nombre": "Resolución de actividades en vivo y consultas"
+        },
+        {
+            "id": "clase-11",
+            "duracion": "2 horas",
+            "nombre": "Flexbox"
+        },
+        {
+            "id": "clase-12",
+            "duracion": "2 horas",
+            "nombre": "Grid"
+        },
+        {
+            "id": "clase-13",
+            "duracion": "1 hora",
+            "nombre": "Resolución de actividades en vivo y consultas"
+        },
+        {
+            "id": "clase-14",
+            "duracion": "2 horas",
+            "nombre": "Media queries"
+        },
+        {
+            "id": "clase-15",
+            "duracion": "2 horas",
+            "nombre": "Transformaciones y animaciones"
+        },
+        {
+            "id": "clase-16",
+            "duracion": "1 hora",
+            "nombre": "Resolución de actividades en vivo y consultas"
+        },
+        {
+            "id": "clase-17",
+            "duracion": "2 horas",
+            "nombre": "Intro a lo que se viene y cositas a tener en cuenta"
+        },
+        {
+            "id": "clase-18",
+            "duracion": "2 horas",
+            "nombre": "Proyecto final"
+        }
+    ]
+}

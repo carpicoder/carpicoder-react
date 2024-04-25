@@ -8,7 +8,8 @@
                 "id": "clase-0",
                 "title": "Clase 0: Introducción al Desarrollo Web",
                 "videos": [
-                    {"title": "Videíto de repaso de la clase", "id": "xCFUV9ji3AA"}
+                    {"title": "Videíto de repaso de la clase", "id": "xCFUV9ji3AA"},
+                    {"title": "3 consejos importantes al comenzar programación", "id": "0BE-QzGjZaQ"}
                 ]
             },
             {
@@ -47,7 +48,8 @@
                     {"title": "Position Fixed / Sticky / Absolute en detalle", "id": "SwGxqHpQnk0"},
                     {"title": "Por qué no usar \"height\" en CSS", "id": "HUTnDswHcuc"},
                     {"title": "Qué hace \"box-sizing\" en nuestro reset", "id": "famvtt4mQUI"},
-                    {"title": "Cómo usar íconos en nuestro sitio web", "id": "c_580b7dzqc"}
+                    {"title": "Cómo usar íconos en nuestro sitio web", "id": "c_580b7dzqc"},
+                    {"title": "Balancear títulos con \"text-wrap: balance\"", "id": "v40BuJSX4FE"}
                 ]
             },
             {
@@ -90,7 +92,8 @@
                 "videos": [
                     {"title": "Videíto de repaso de la clase", "id": "Qi7_3eLKCr8"},
                     {"title": "::before y ::after explicados", "id": "wEl62cnPBsY", "featured": true},
-                    {"title": "Conociendo una propiedad para controlar imágenes", "id": "SfIhedIsUck"}
+                    {"title": "Conociendo una propiedad para controlar imágenes", "id": "SfIhedIsUck"},
+                    {"title": "attr() en pseudoelementos", "id": "M-uMfdDqSeU"}
                 ]
             },
             {
@@ -163,7 +166,8 @@
                 "id": "clase-1",
                 "title": "Clase 1: Sintaxis, variables y consola",
                 "videos": [
-                    {"title": "Videíto de repaso de la clase", "id": "-H4W_PkFbls"}
+                    {"title": "Videíto de repaso de la clase", "id": "-H4W_PkFbls"},
+                    {"title": "3 consejos importantes al comenzar programación", "id": "0BE-QzGjZaQ"}
                 ]
             },
             {
@@ -177,7 +181,8 @@
                 "id": "clase-3",
                 "title": "Clase 3: for, while, do...while y switch",
                 "videos": [
-                    {"title": "Videíto de repaso de la clase", "id": "aCbLJO8HIzk"}
+                    {"title": "Videíto de repaso de la clase", "id": "aCbLJO8HIzk"},
+                    {"title": "Short sobre Switch", "id": "aF0B2QV1qwA"}
                 ]
             },
             {
@@ -205,7 +210,9 @@
                 "id": "clase-7",
                 "title": "Clase 7: Funciones de orden superior",
                 "videos": [
-                    {"title": "Videíto de repaso de la clase", "id": "-JWVobI2m80"}
+                    {"title": "Videíto de repaso de la clase", "id": "-JWVobI2m80"},
+                    {"title": "Cómo funcionan los métodos de Arrays", "id": "1O5JL9mC3Gc"},
+                    {"title": "Cuenta regresiva con Date", "id": "SVR8tw2UMLk"}
                 ]
             },
             {
@@ -219,7 +226,9 @@
                 "id": "clase-9",
                 "title": "Clase 9: Eventos",
                 "videos": [
-                    {"title": "Videíto de repaso de la clase", "id": "LI6RMcvfnt0"}
+                    {"title": "Videíto de repaso de la clase", "id": "LI6RMcvfnt0"},
+                    {"title": "Armar un menú hamburguesa", "id": "Xs3cC8-5QDI"},
+                    {"title": "Sitio web con modo oscuro", "id": "lBFzfTA6AN4"}
                 ]
             },
             {
@@ -271,10 +280,104 @@
                 "id": "proyectos-y-recomendaciones",
                 "title": "Proyectos y recomendaciones finales",
                 "videos": [
-                    {"title": "Pokédex con la PokéAPI", "id": "EmxvMPcIy5c"},
                     {"title": "Temas importantes de JS a tener en cuenta para React", "id": "IISOVCyzmuw"},
+                    {"title": "Pokédex con la PokéAPI", "id": "EmxvMPcIy5c"},
                     {"title": "Piedra, papel o tijera", "id": "QZ6iJG1mQFM"},
+                    {"title": "Calculadora", "id": "hZFEgkrOwks"},
                     {"title": "Efecto Parallax", "id": "hsC4XRdMmEg"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "react",
+        "title": "React",
+        "titleFull": "Curso de React",
+        "classes": [
+            {
+                "id": "clase-1",
+                "title": "Clase 1: Instalación y configuración",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "2SwKpVVNfIE"},
+                    {"title": "Instalar React con Vite", "id": "37xRs634KCQ"}
+                ]
+            },
+            {
+                "id": "clase-2",
+                "title": "Clase 2: JSX",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "jxJEXT8j5qA"}
+                ]
+            },
+            {
+                "id": "clase-3",
+                "title": "Clase 3: Componentes y props",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "EJzX4XSpZFg"}
+                ]
+            },
+            {
+                "id": "clase-4",
+                "title": "Clase 4: useState y useEffect hooks, y ciclo de vida de los componentes",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "C7CZzM7ux0E"}
+                ]
+            },
+            {
+                "id": "clase-5",
+                "title": "Clase 5: Promesas y .map()",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "w1RdYx57Nb4"}
+                ]
+            },
+            {
+                "id": "clase-6",
+                "title": "Clase 6: Consumiendo APIs",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "jYf6OCFx6Mc"}
+                ]
+            },
+            {
+                "id": "clase-7",
+                "title": "Clase 7: Routing y navegación",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "WATv_Md3y_o"}
+                ]
+            },
+            {
+                "id": "clase-8",
+                "title": "Clase 8: Eventos",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "KWeQ-FqyMcw"}
+                ]
+            },
+            {
+                "id": "clase-9",
+                "title": "Clase 9: Formularios",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "EgYbPKNH1IA"}
+                ]
+            },
+            {
+                "id": "clase-10",
+                "title": "Clase 10: Context y localStorage",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "Guw9hURRjqw"}
+                ]
+            },
+            {
+                "id": "clase-11",
+                "title": "Clase 11: Integrando Firebase",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "FH0nW3bQ6Kg"}
+                ]
+            },
+            {
+                "id": "clase-12",
+                "title": "Clase 12: Enviando datos a Firebase",
+                "videos": [
+                    {"title": "Videíto de repaso de la clase", "id": "VvH8awK7KYk"},
+                    {"title": "Deploy de nuestra App en Netlify", "id": "ByaNK_EjHMg"}
                 ]
             }
         ]

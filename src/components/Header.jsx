@@ -98,8 +98,6 @@ const Header = ({ location }) =>{
       setMenuActive(false);
     }, 500);
   }, [location])
-  
-
 
 
     return (

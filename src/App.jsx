@@ -10,15 +10,16 @@ import Donations from "./components/Donations/Donations";
 import { AnimatePresence } from 'framer-motion';
 import { useEffect } from 'react';
 import NotFound from './components/NotFound';
+import CourseHTMLCSS from './components/Courses/CourseHTMLCSS';
 
 const App = () => {
 
   const location = useLocation();
+  const { pathname } = useLocation();
+
   useEffect(() => {
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 0);
-  }, [location]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <div className="App">
@@ -32,6 +33,7 @@ const App = () => {
             <Route path="/repasos-coderhouse" element={<ReviewsCH />} />
             <Route path="/repasos-coderhouse/:course" element={<CHCourse />} />
             <Route path="/donaciones" element={<Donations />} />
+            <Route path="/curso-html-css" element={<CourseHTMLCSS />} />
           </Routes>
         </AnimatePresence>
 

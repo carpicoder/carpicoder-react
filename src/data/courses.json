@@ -1,0 +1,29 @@
+[
+    {
+        "name": "HTML + CSS",
+        "description": "Aprendé a desarrollar sitios web estáticos completos, con proyectos reales y acompañamiento diario.",
+        "features": ["En vivo", "18 clases", "Proyectos reales", "Canal de Discord privado"],
+        "price": {
+            "ars": 27500,
+            "usd": 75,
+            "eur": 75
+        },
+        "order": 1,
+        "payment_links": {
+            "ars": "https://buy.stripe.com/cN24keeo88k62cwcMS",
+            "usd": "https://buy.stripe.com/dR603Y5RC6bY7wQ5kp",
+            "eur": "https://buy.stripe.com/9AQ182gwgfMyg3m6os"
+        },
+        "link": "HTML + CSS"
+    },
+    {
+        "name": "CSS avanzado",
+        "order": 2,
+        "soon": true
+    },
+    {
+        "name": "JavaScript",
+        "order": 2,
+        "soon": true
+    }
+]

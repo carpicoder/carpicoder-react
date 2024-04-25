@@ -1,6 +1,6 @@
 {
   "name": "portfolio-carpi",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://carpicoder.com/",
@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "bootstrap-icons": "^1.10.5",
+    "firebase": "^10.4.0",
     "framer-motion": "^10.16.4",
     "gsap": "^3.12.2",
     "i18next": "^23.5.1",
