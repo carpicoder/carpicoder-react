@@ -42,7 +42,9 @@ const HeroText = () => {
                 delay: colorDelay + .1
             })
 
-            char.addEventListener("mouseenter", () => {
+            function charOnEnter() {
+                char.removeEventListener("mouseenter", charOnEnter);
+
                 gsap.to(char, {
                     translateY: -10,
                     rotateZ: Math.floor(Math.random() * 101) - 50,
@@ -56,26 +58,31 @@ const HeroText = () => {
                     duration: .1,
                     ease: "back.out",
                 })
-            })
-            char.addEventListener("mouseleave", () => {
-                gsap.to(char, {
-                    translateY: 0,
-                    rotateZ: 0,
-                    translateX: 0,
-                    delay: .75,
-                    duration: .7,
-                    ease: "back.out(4)",
-                    scale: 1
-                })
-                const endDelay = Math.random() * (3 - 1.5) + 1.5;
-                gsap.to(char, {
-                    color: docStyle.getPropertyValue("--clr-text"),
-                    delay: endDelay,
-                    duration: 1.5,
-                    ease: "back.out",
-                    clearProps: "color",
-                })
-            })
+                
+                const endDelay = Math.random() * (2 - 0.5) + 0.5;
+                setTimeout(() => {
+                    gsap.to(char, {
+                        translateY: 0,
+                        rotateZ: 0,
+                        translateX: 0,
+                        delay: .75,
+                        duration: .7,
+                        ease: "back.out(4)",
+                        scale: 1
+                    })
+                    gsap.to(char, {
+                        color: docStyle.getPropertyValue("--clr-text"),
+                        delay: endDelay,
+                        duration: .5,
+                        ease: "back.out",
+                        onComplete: () => {
+                            char.addEventListener("mouseenter", charOnEnter);
+                        }
+                    })
+                }, endDelay + 150);
+            }
+
+            char.addEventListener("mouseenter", charOnEnter);
         });
 
         

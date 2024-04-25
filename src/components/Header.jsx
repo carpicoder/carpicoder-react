@@ -49,33 +49,42 @@ const Header = ({ location }) =>{
       delay: 1.25
     })
 
-    logoText.chars.forEach((char) => {
-
-      char.addEventListener("mouseenter", () => {
-          gsap.to(char, {
-            translateY: -10,
-            color: docStyle.getPropertyValue("--clr-primary"),
-            duration: .5,
-            ease: "back.out",
-          })
-      })
-      char.addEventListener("mouseleave", () => {
-          gsap.to(char, {
-            translateY: 0,
-            delay: .3,
-            ease: "back.out(5)",
-          })
-          gsap.to(char, {
-            delay: .4,
-            ease: "back.out(1)",
-            color: char.textContent !== "." ? docStyle.getPropertyValue("--clr-text") : docStyle.getPropertyValue("--clr-primary"),
-          })
-          gsap.to(char, {
-            clearProps: "color",
-            delay: .45
-          })
-      })
-    });
+    logoElement.addEventListener("mouseenter", () => {
+  
+      gsap.to(logoText.chars, {
+          translateY: -10,
+          color: docStyle.getPropertyValue("--clr-primary"),
+          duration: .5,
+          ease: "back.out",
+          stagger: .02
+      });
+  
+      gsap.to(logoText.chars, {
+          translateY: 0,
+          delay: .3,
+          ease: "back.out(5)",
+          stagger: .02
+      });
+  
+      gsap.to(logoText.chars, {
+          delay: .4,
+          ease: "back.out(1)",
+          stagger: .02,
+          onStart: () => {
+              logoText.chars.forEach((char) => {
+                  if (char.innerText === ".") {
+                    gsap.to(char, {
+                      color: docStyle.getPropertyValue("--clr-primary"),
+                    })
+                  } else {
+                    gsap.to(char, {
+                      color: docStyle.getPropertyValue("--clr-text"),
+                    })
+                  }
+              });
+          }
+      });
+  });
 
   }, [i18n.language])
 
