@@ -10,6 +10,8 @@ import logoPaypal from "../../assets/logo-paypal.png";
 import logoCafecito from "../../assets/logo-cafecito.jpg";
 import logoMercadopago from "../../assets/logo-mercadopago.png";
 import logoPatreon from "../../assets/logo-patreon.png";
+import logoUSDT from "../../assets/logo-usdt.png";
+import logoBTC from "../../assets/logo-btc.png";
 
 
 const Donations = () => {
@@ -43,7 +45,29 @@ const Donations = () => {
           <InnerSectionTitle text={tt("donations.title")} key={i18n.language}/>
           <InnerSectionSubtitle text={tt("donations.subtitle")}/>
           <div className="donations-grid">
-          <article id="argentina" className="donation" ref={element => {donationRef.current[0] = element;}}>
+          <article id="crypto" className="donation crypto" ref={element => {donationRef.current[0] = element;}}>
+            <h2 className="donation-title">Crypto 🪙</h2>
+
+            <h3 className="donation-subtitle">
+            <img src={logoUSDT} alt="USDT" />
+              USDT
+              </h3>
+            <div className="">
+              <p className="small">BNB Chain (BEP20 BSC): 0x768dF46bcA4a6D5398B28d192458FdA0046d5EBe</p>
+              <p className="small">Ethereum (ERC20): 0x768dF46bcA4a6D5398B28d192458FdA0046d5EBe</p>
+              <p className="small">Tron (TRC20): TTU9ChJqXqJiiqu54bG7w8boLKms18rcdS</p>
+            </div>
+
+            <h3 className="donation-subtitle">
+            <img src={logoBTC} alt="Bitcoin" />
+              Bitcoin
+              </h3>
+            <div className="">
+              <p className="small">BNB Chain (BEP20 BSC): 0x768dF46bcA4a6D5398B28d192458FdA0046d5EBe</p>
+              <p className="small">BTC: bc1qjjjy09su9cw8s2zfvxur3g2rzu27cy3hen3xzt</p>
+            </div>
+          </article>
+          <article id="argentina" className="donation" ref={element => {donationRef.current[1] = element;}}>
             <h2 className="donation-title">{tt("donations.fromArgentina")}</h2>
 
             <h3 className="donation-subtitle">
@@ -91,7 +115,7 @@ const Donations = () => {
             </div>
 
           </article>
-          <article id="resto-del-mundo" className="donation" ref={element => {donationRef.current[1] = element;}}>
+          <article id="resto-del-mundo" className="donation" ref={element => {donationRef.current[2] = element;}}>
             <h2 className="donation-title">{tt("donations.fromTheRest")}</h2>
 
             <h3 className="donation-subtitle">

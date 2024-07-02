@@ -6,6 +6,15 @@
         border: 1px solid $clr-primary;
         border-radius: 1rem;
 
+        &.crypto {
+            grid-column: span 2;
+
+            .small {
+                font-size: 1rem;
+                margin-top: .5em;
+            }
+        }
+
         @include query(650) {
             padding: 2rem;
         }

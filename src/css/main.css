@@ -814,6 +814,13 @@ p {
   border: 1px solid var(--clr-primary);
   border-radius: 1rem;
 }
+.donations .donation.crypto {
+  grid-column: span 2;
+}
+.donations .donation.crypto .small {
+  font-size: 1rem;
+  margin-top: 0.5em;
+}
 @media screen and (max-width: 650px) {
   .donations .donation {
     padding: 2rem;
