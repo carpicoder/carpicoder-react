@@ -9,9 +9,18 @@
         &.crypto {
             grid-column: span 2;
 
+            @include query(900) {
+                grid-column: span 1;
+            }
+
             .small {
                 font-size: 1rem;
                 margin-top: .5em;
+                word-break: break-all;
+
+                span {
+                    font-weight: 600;
+                }
             }
         }
 

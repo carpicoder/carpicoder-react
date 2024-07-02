@@ -817,9 +817,18 @@ p {
 .donations .donation.crypto {
   grid-column: span 2;
 }
+@media screen and (max-width: 900px) {
+  .donations .donation.crypto {
+    grid-column: span 1;
+  }
+}
 .donations .donation.crypto .small {
   font-size: 1rem;
   margin-top: 0.5em;
+  word-break: break-all;
+}
+.donations .donation.crypto .small span {
+  font-weight: 600;
 }
 @media screen and (max-width: 650px) {
   .donations .donation {

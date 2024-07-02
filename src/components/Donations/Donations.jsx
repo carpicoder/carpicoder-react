@@ -53,9 +53,9 @@ const Donations = () => {
               USDT
               </h3>
             <div className="">
-              <p className="small">BNB Chain (BEP20 BSC): 0x768dF46bcA4a6D5398B28d192458FdA0046d5EBe</p>
-              <p className="small">Ethereum (ERC20): 0x768dF46bcA4a6D5398B28d192458FdA0046d5EBe</p>
-              <p className="small">Tron (TRC20): TTU9ChJqXqJiiqu54bG7w8boLKms18rcdS</p>
+              <p className="small">BNB Chain (BEP20 BSC): <span>0x768dF46bcA4a6D5398B28d192458FdA0046d5EBe</span></p>
+              <p className="small">Ethereum (ERC20): <span>0x768dF46bcA4a6D5398B28d192458FdA0046d5EBe</span></p>
+              <p className="small">Tron (TRC20): <span>TTU9ChJqXqJiiqu54bG7w8boLKms18rcdS</span></p>
             </div>
 
             <h3 className="donation-subtitle">
@@ -63,8 +63,8 @@ const Donations = () => {
               Bitcoin
               </h3>
             <div className="">
-              <p className="small">BNB Chain (BEP20 BSC): 0x768dF46bcA4a6D5398B28d192458FdA0046d5EBe</p>
-              <p className="small">BTC: bc1qjjjy09su9cw8s2zfvxur3g2rzu27cy3hen3xzt</p>
+              <p className="small">BNB Chain (BEP20 BSC): <span>0x768dF46bcA4a6D5398B28d192458FdA0046d5EBe</span></p>
+              <p className="small">BTC: <span>bc1qjjjy09su9cw8s2zfvxur3g2rzu27cy3hen3xzt</span></p>
             </div>
           </article>
           <article id="argentina" className="donation" ref={element => {donationRef.current[1] = element;}}>
